@@ -53,7 +53,7 @@ python -m venv .venv
 - [15-minute demo guide](docs/demo_guide.md) — time allocation with matching notebooks (Chinese)
 - [FAQ](docs/faq.md) — method trade-offs and data onboarding (Chinese)
 - [Technical report](results/technical_report.md) — full method and result matrix (Chinese)
-- [Interactive HTML report](docs/semadexp_report.html) — self-contained, charts embedded, offline & print friendly
+- [Interactive HTML report (live)](https://geyuzi11.github.io/semadexp/semadexp_report.html) — self-contained, charts embedded, offline & print friendly ([repo file](docs/semadexp_report.html))
 - [Project Wiki](https://github.com/geyuzi11/semadexp/wiki) — architecture, methodology, results & reproduction, data reference
 
 ## CLI Reference
