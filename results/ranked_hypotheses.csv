@@ -1,0 +1,6 @@
+statement,metric,direction,confidence,source,policy_kind,expected_lift,risk,priority,matched_experiment_id,true_effect
+放宽预算上限可提升大客户消耗与总转化,total_spend,up,0.6066666666666667,corpus,budget_cap_multiplier,0.02878787878787879,0.5,0.034929292929292935,34,0.04545454545454547
+切换二价机制可降低恶意抬价并提升广告主留存,advertiser_survival,up,0.565,corpus,auction_rule,0.01212121212121211,0.9,0.0076094276094276015,18,0.04545454545454544
+降低竞价门槛可提升中小广告主活跃度与总消耗,small_advertiser_survival,up,0.6483333333333333,corpus,lower_bid_floor,0.0022727272727272735,0.6,0.002455808080808082,40,0.045454545454545456
+限制单条信息流广告条数可降低用户负反馈率,negative_feedback_rate,down,0.565,corpus,ad_load_cap,-0.03863636363636363,0.4,-0.05457386363636362,12,-0.17272727272727273
+提高竞价门槛可降低低质广告数量与用户负反馈率,negative_feedback_rate,down,0.6066666666666667,corpus,raise_bid_floor,-0.09696969696969697,0.7,-0.08404040404040404,11,-0.11818181818181817

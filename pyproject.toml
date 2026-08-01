@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semadexp"
+version = "0.1.0"
+description = "SemAdExp: LLM-augmented experimentation intelligence platform for two-sided ad markets"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.0",
+  "pydantic>=2.5",
+  "scikit-learn>=1.4",
+  "matplotlib>=3.8",
+  "networkx>=3.2",
+]
+
+[project.optional-dependencies]
+llm = ["openai>=1.30"]
+gbdt = ["lightgbm>=4.0"]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["semadexp*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+

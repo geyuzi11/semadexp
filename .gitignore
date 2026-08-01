@@ -1,0 +1,11 @@
+.venv/
+.DS_Store
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+data/criteo/
+data/cache/
+reports/figures/
+results_quick/
+*.egg-info/
