@@ -2,6 +2,8 @@
 
 ![CI](https://github.com/geyuzi11/semadexp/actions/workflows/ci.yml/badge.svg)
 
+[English](README_EN.md) | 中文
+
 一个端到端可复现、四层全部量化验证的广告实验智能平台开源项目。核心命题：
 **LLM 语义信息贯穿实验全链路（假设生成 → 反事实均衡仿真 → 语义竞争分桶 → 效果估计 → 归因与剥离 → 知识回流），提升双边广告市场实验的准确性、稳定性与迭代效率。**
 
@@ -55,6 +57,7 @@ python -m venv .venv
 - [15 分钟项目演示指南](docs/demo_guide.md) —— 时间分配与对应 Notebook 路径
 - [常见问题 FAQ](docs/faq.md) —— 方法取舍与数据接入说明
 - [中文技术报告](results/technical_report.md) —— 完整方法与结果矩阵
+- [项目 Wiki](https://github.com/geyuzi11/semadexp/wiki) —— 架构、方法论、结果复现与数据说明
 
 ## 常用 CLI
 
@@ -122,6 +125,21 @@ results/                # 运行产物（报告、CSV、图表）
 
 默认使用离线合成行为数据集保证开箱可跑。将 Criteo 数据放入 `data/criteo/train.txt` 后，
 `semadexp/data/corpora.load_criteo_sample()` 可直接接入真实行为特征基线。
+
+## 示例数据包
+
+`data/sample/` 内置一份固定种子生成的示例数据（约 200 个广告主），无需运行仿真即可查看输入数据形态：
+
+| 文件 | 内容 |
+|---|---|
+| `advertisers_sample.csv` | 广告主画像（品类/档位/预算/出价/质量分/人群/文案/目标） |
+| `creative_corpus_sample.csv` | 广告文案语料（每条文案一行） |
+| `operation_logs_sample.csv` | 广告主操作日志（调价/改素材/扩定向，含自由文本） |
+| `feedback_corpus_sample.csv` | 多源反馈语料（工单/负反馈/审核/复盘/行业动态） |
+| `behavior_sample.csv` | 行为特征基线（含点击标签，可替换为 Criteo） |
+
+`data/sample/README.md` 给出每张表的字段说明；代码中用 `semadexp.data.sample.load_sample()` 一键加载。
+重新生成示例数据：`python scripts/export_sample_data.py`。
 
 ## 诚实性声明（局限）
 
