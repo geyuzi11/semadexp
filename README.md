@@ -1,5 +1,7 @@
 # SemAdExp：LLM 语义增强的双边市场实验智能平台
 
+![CI](https://github.com/geyuzi11/semadexp/actions/workflows/ci.yml/badge.svg)
+
 一个端到端可复现、四层全部量化验证的广告实验智能平台开源项目。核心命题：
 **LLM 语义信息贯穿实验全链路（假设生成 → 反事实均衡仿真 → 语义竞争分桶 → 效果估计 → 归因与剥离 → 知识回流），提升双边广告市场实验的准确性、稳定性与迭代效率。**
 
