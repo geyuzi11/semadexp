@@ -54,10 +54,8 @@ python -m venv .venv
 ## 项目文档
 
 - [项目概览](docs/project_overview.md) —— 定位、问题对应、量化证据、工程亮点
-- [15 分钟项目演示指南](docs/demo_guide.md) —— 时间分配与对应 Notebook 路径
 - [常见问题 FAQ](docs/faq.md) —— 方法取舍与数据接入说明
 - [中文技术报告](results/technical_report.md) —— 完整方法与结果矩阵
-- [可视化 HTML 报告（在线版）](https://geyuzi11.github.io/semadexp/semadexp_report.html) —— 单文件、图表内嵌、可离线打开与打印（[仓库内文件](docs/semadexp_report.html)）
 - [项目 Wiki](https://github.com/geyuzi11/semadexp/wiki) —— 架构、方法论、结果复现与数据说明
 
 ## 常用 CLI
