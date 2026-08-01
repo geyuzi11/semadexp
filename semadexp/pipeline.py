@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import datetime as _dt
+import json
 from pathlib import Path
 
 import numpy as np
@@ -141,6 +143,41 @@ def run_pipeline(scale: str = "full", out_dir: str = "results", seed: int = 7) -
             for k, v in hyp_eval.top_k_capture.items()
         ]
     ).to_csv(out / "capture_curve.csv", index=False)
+    summary = {
+        "meta": {
+            "scale": scale,
+            "seed": seed,
+            "generated_at": _dt.datetime.now().astimezone().isoformat(timespec="seconds"),
+        },
+        "ablation": ablation,
+        "matrix": {
+            "results": json.loads(matrix["results"].to_json(orient="records", force_ascii=False)),
+            "design": json.loads(matrix["design"].to_json(orient="records", force_ascii=False)),
+        },
+        "hypothesis_eval": {
+            "recall_at_top_x": hyp_eval.recall_at_top_x,
+            "spearman": hyp_eval.spearman_priority_vs_true,
+            "spearman_p": hyp_eval.spearman_p_value,
+            "experiments_to_50pct": hyp_eval.experiments_to_50pct,
+            "random_experiments_to_50pct": hyp_eval.random_experiments_to_50pct,
+            "top_k_capture": {str(k): float(v) for k, v in hyp_eval.top_k_capture.items()},
+            "random_baseline_capture": {str(k): float(v) for k, v in hyp_eval.random_baseline_capture.items()},
+            "manual_baseline_capture": {str(k): float(v) for k, v in hyp_eval.manual_baseline_capture.items()},
+        },
+        "ranked_hypotheses": [_jsonable(h.__dict__) for h in ranked],
+        "equilibrium": {
+            "policy": eq.scenario.policy.label(),
+            "converged": eq.converged,
+            "final_metrics": _jsonable(eq.final_metrics),
+            "static_metrics": _jsonable(eq.static_metrics),
+            "sensitivity": json.loads(eq.sensitivity.to_json(orient="records", force_ascii=False)),
+            "response_hypotheses": _jsonable([h.model_dump() for h in eq.response_hypotheses]),
+        },
+        "closed_loop": _closed_loop_summary(loop),
+    }
+    (out / "pipeline_summary.json").write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     return {
         "ablation": ablation,
         "matrix": matrix,
@@ -149,4 +186,45 @@ def run_pipeline(scale: str = "full", out_dir: str = "results", seed: int = 7) -
         "equilibrium": eq,
         "closed_loop": loop,
         "report": report,
+        "summary": summary,
+    }
+
+
+def _jsonable(obj):
+    if isinstance(obj, dict):
+        return {k: _jsonable(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_jsonable(v) for v in obj]
+    if isinstance(obj, np.integer):
+        return int(obj)
+    if isinstance(obj, np.floating):
+        return float(obj)
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()
+    if hasattr(obj, "model_dump"):
+        return _jsonable(obj.model_dump())
+    if hasattr(obj, "to_dict"):
+        return _jsonable(obj.to_dict())
+    return obj
+
+
+def _closed_loop_summary(loop: dict) -> dict:
+    if not loop:
+        return {}
+    d = loop.get("decomposition")
+    return {
+        "hypothesis": loop.get("hypothesis"),
+        "policy": loop.get("policy"),
+        "true_effect": loop.get("true_effect"),
+        "design": _jsonable(loop.get("design")),
+        "estimates": json.loads(loop["estimates"].to_json(orient="records", force_ascii=False)),
+        "decomposition": {
+            "total_effect": d.total_effect,
+            "direct_effect": d.direct_effect,
+            "indirect_effect": d.indirect_effect,
+            "validation": _jsonable(d.validation),
+        }
+        if d is not None
+        else {},
+        "attribution": loop.get("attribution"),
     }

@@ -1,0 +1,983 @@
+{
+  "meta": {
+    "scale": "full",
+    "seed": 7,
+    "generated_at": "2026-08-02T06:45:22+08:00"
+  },
+  "ablation": {
+    "auc_trad": 0.6290204678362573,
+    "auc_fused": 0.6717836257309941,
+    "logloss_trad": 0.6223849968852134,
+    "logloss_fused": 0.6080518287429435,
+    "entropy_gain": 0.014333168142269925,
+    "auc_gain": 0.042763157894736836,
+    "n_trad_features": 7,
+    "n_semantic_features": 21
+  },
+  "matrix": {
+    "results": [
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "structured_stratified",
+        "estimator": "diff_in_means",
+        "bias": -1.7654545455,
+        "variance": 1.4047239669,
+        "rmse": 2.1263945351,
+        "coverage": 0.7,
+        "power": 0.3,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "structured_stratified",
+        "estimator": "cuped",
+        "bias": -1.7654545455,
+        "variance": 1.4047239669,
+        "rmse": 2.1263945351,
+        "coverage": 0.1,
+        "power": 0.8,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "structured_stratified",
+        "estimator": "randomization_inference",
+        "bias": -1.7654545455,
+        "variance": 1.4047239669,
+        "rmse": 2.1263945351,
+        "coverage": 1.0,
+        "power": 0.1,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "structured_stratified",
+        "estimator": "exposure_mapping",
+        "bias": -1.8235271788,
+        "variance": 1.4150610288,
+        "rmse": 2.1772258497,
+        "coverage": 0.9,
+        "power": 0.1,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "semantic_stratified",
+        "estimator": "diff_in_means",
+        "bias": -2.157809308,
+        "variance": 0.7064091351,
+        "rmse": 2.3157180625,
+        "coverage": 0.3,
+        "power": 0.7,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "semantic_stratified",
+        "estimator": "cuped",
+        "bias": -2.157809308,
+        "variance": 0.7064091351,
+        "rmse": 2.3157180625,
+        "coverage": 0.0,
+        "power": 1.0,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "semantic_stratified",
+        "estimator": "randomization_inference",
+        "bias": -2.157809308,
+        "variance": 0.7064091351,
+        "rmse": 2.3157180625,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "semantic_stratified",
+        "estimator": "exposure_mapping",
+        "bias": -2.2126933813,
+        "variance": 0.6465444707,
+        "rmse": 2.3542634667,
+        "coverage": 0.9,
+        "power": 0.0,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "graph_cluster",
+        "estimator": "diff_in_means",
+        "bias": -0.0672727273,
+        "variance": 0.2282347107,
+        "rmse": 0.4824524128,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "graph_cluster",
+        "estimator": "cuped",
+        "bias": -0.0672727273,
+        "variance": 0.2282347107,
+        "rmse": 0.4824524128,
+        "coverage": 0.8,
+        "power": 0.2,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "graph_cluster",
+        "estimator": "randomization_inference",
+        "bias": -0.0672727273,
+        "variance": 0.2282347107,
+        "rmse": 0.4824524128,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "interference": 0.6,
+        "heterogeneity": 0.6,
+        "bucketing": "graph_cluster",
+        "estimator": "exposure_mapping",
+        "bias": -0.1233421636,
+        "variance": 0.2116813164,
+        "rmse": 0.4763345523,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0181818182
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "structured_stratified",
+        "estimator": "diff_in_means",
+        "bias": -1.7909090909,
+        "variance": 1.1616528926,
+        "rmse": 2.0902172769,
+        "coverage": 0.5,
+        "power": 0.5,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "structured_stratified",
+        "estimator": "cuped",
+        "bias": -1.7909090909,
+        "variance": 1.1616528926,
+        "rmse": 2.0902172769,
+        "coverage": 0.2,
+        "power": 0.6,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "structured_stratified",
+        "estimator": "randomization_inference",
+        "bias": -1.7909090909,
+        "variance": 1.1616528926,
+        "rmse": 2.0902172769,
+        "coverage": 1.0,
+        "power": 0.1,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "structured_stratified",
+        "estimator": "exposure_mapping",
+        "bias": -1.8615774652,
+        "variance": 1.1958513911,
+        "rmse": 2.1590095067,
+        "coverage": 0.9,
+        "power": 0.1,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "semantic_stratified",
+        "estimator": "diff_in_means",
+        "bias": -2.0245224008,
+        "variance": 0.7245931258,
+        "rmse": 2.1961976408,
+        "coverage": 0.3,
+        "power": 0.7,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "semantic_stratified",
+        "estimator": "cuped",
+        "bias": -2.0245224008,
+        "variance": 0.7245931258,
+        "rmse": 2.1961976408,
+        "coverage": 0.2,
+        "power": 0.8,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "semantic_stratified",
+        "estimator": "randomization_inference",
+        "bias": -2.0245224008,
+        "variance": 0.7245931258,
+        "rmse": 2.1961976408,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "semantic_stratified",
+        "estimator": "exposure_mapping",
+        "bias": -2.087609845,
+        "variance": 0.6098336108,
+        "rmse": 2.2288895162,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "graph_cluster",
+        "estimator": "diff_in_means",
+        "bias": -0.14,
+        "variance": 0.2062677686,
+        "rmse": 0.4752554772,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "graph_cluster",
+        "estimator": "cuped",
+        "bias": -0.14,
+        "variance": 0.2062677686,
+        "rmse": 0.4752554772,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "graph_cluster",
+        "estimator": "randomization_inference",
+        "bias": -0.14,
+        "variance": 0.2062677686,
+        "rmse": 0.4752554772,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "interference": 0.6,
+        "heterogeneity": 1.8,
+        "bucketing": "graph_cluster",
+        "estimator": "exposure_mapping",
+        "bias": -0.2121727849,
+        "variance": 0.2361753868,
+        "rmse": 0.5302760389,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "structured_stratified",
+        "estimator": "diff_in_means",
+        "bias": -2.3436363636,
+        "variance": 0.466922314,
+        "rmse": 2.4412197195,
+        "coverage": 0.1,
+        "power": 0.9,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "structured_stratified",
+        "estimator": "cuped",
+        "bias": -2.3436363636,
+        "variance": 0.466922314,
+        "rmse": 2.4412197195,
+        "coverage": 0.0,
+        "power": 1.0,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "structured_stratified",
+        "estimator": "randomization_inference",
+        "bias": -2.3436363636,
+        "variance": 0.466922314,
+        "rmse": 2.4412197195,
+        "coverage": 1.0,
+        "power": 0.1,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "structured_stratified",
+        "estimator": "exposure_mapping",
+        "bias": -2.3917171215,
+        "variance": 0.476374337,
+        "rmse": 2.4893141879,
+        "coverage": 0.5,
+        "power": 0.4,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "semantic_stratified",
+        "estimator": "diff_in_means",
+        "bias": -2.5186689492,
+        "variance": 0.5018079503,
+        "rmse": 2.6163908779,
+        "coverage": 0.1,
+        "power": 0.9,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "semantic_stratified",
+        "estimator": "cuped",
+        "bias": -2.5186689492,
+        "variance": 0.5018079503,
+        "rmse": 2.6163908779,
+        "coverage": 0.0,
+        "power": 1.0,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "semantic_stratified",
+        "estimator": "randomization_inference",
+        "bias": -2.5186689492,
+        "variance": 0.5018079503,
+        "rmse": 2.6163908779,
+        "coverage": 1.0,
+        "power": 0.2,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "semantic_stratified",
+        "estimator": "exposure_mapping",
+        "bias": -2.5438944922,
+        "variance": 0.5020747851,
+        "rmse": 2.6407336049,
+        "coverage": 0.4,
+        "power": 0.6,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "graph_cluster",
+        "estimator": "diff_in_means",
+        "bias": -0.94,
+        "variance": 0.2647140496,
+        "rmse": 1.0715941627,
+        "coverage": 0.7,
+        "power": 0.3,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "graph_cluster",
+        "estimator": "cuped",
+        "bias": -0.94,
+        "variance": 0.2647140496,
+        "rmse": 1.0715941627,
+        "coverage": 0.2,
+        "power": 0.8,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "graph_cluster",
+        "estimator": "randomization_inference",
+        "bias": -0.94,
+        "variance": 0.2647140496,
+        "rmse": 1.0715941627,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "interference": 1.6,
+        "heterogeneity": 0.6,
+        "bucketing": "graph_cluster",
+        "estimator": "exposure_mapping",
+        "bias": -1.0244309624,
+        "variance": 0.3111159934,
+        "rmse": 1.1664367922,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": 0.0818181818
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "structured_stratified",
+        "estimator": "diff_in_means",
+        "bias": -2.0236363636,
+        "variance": 0.305722314,
+        "rmse": 2.0978146835,
+        "coverage": 0.1,
+        "power": 1.0,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "structured_stratified",
+        "estimator": "cuped",
+        "bias": -2.0236363636,
+        "variance": 0.305722314,
+        "rmse": 2.0978146835,
+        "coverage": 0.0,
+        "power": 1.0,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "structured_stratified",
+        "estimator": "randomization_inference",
+        "bias": -2.0236363636,
+        "variance": 0.305722314,
+        "rmse": 2.0978146835,
+        "coverage": 1.0,
+        "power": 0.2,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "structured_stratified",
+        "estimator": "exposure_mapping",
+        "bias": -2.0860374831,
+        "variance": 0.3082407526,
+        "rmse": 2.1586553994,
+        "coverage": 0.8,
+        "power": 0.2,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "semantic_stratified",
+        "estimator": "diff_in_means",
+        "bias": -2.2720982561,
+        "variance": 0.2603226475,
+        "rmse": 2.3286805562,
+        "coverage": 0.0,
+        "power": 1.0,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "semantic_stratified",
+        "estimator": "cuped",
+        "bias": -2.2720982561,
+        "variance": 0.2603226475,
+        "rmse": 2.3286805562,
+        "coverage": 0.0,
+        "power": 1.0,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "semantic_stratified",
+        "estimator": "randomization_inference",
+        "bias": -2.2720982561,
+        "variance": 0.2603226475,
+        "rmse": 2.3286805562,
+        "coverage": 1.0,
+        "power": 0.3,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "semantic_stratified",
+        "estimator": "exposure_mapping",
+        "bias": -2.306699942,
+        "variance": 0.2745182436,
+        "rmse": 2.3654561645,
+        "coverage": 0.7,
+        "power": 0.4,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "graph_cluster",
+        "estimator": "diff_in_means",
+        "bias": -0.6781818182,
+        "variance": 0.2862842975,
+        "rmse": 0.8638372972,
+        "coverage": 0.6,
+        "power": 0.4,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "graph_cluster",
+        "estimator": "cuped",
+        "bias": -0.6781818182,
+        "variance": 0.2862842975,
+        "rmse": 0.8638372972,
+        "coverage": 0.5,
+        "power": 0.6,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "graph_cluster",
+        "estimator": "randomization_inference",
+        "bias": -0.6781818182,
+        "variance": 0.2862842975,
+        "rmse": 0.8638372972,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": -0.1636363636
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "interference": 1.6,
+        "heterogeneity": 1.8,
+        "bucketing": "graph_cluster",
+        "estimator": "exposure_mapping",
+        "bias": -0.7943453419,
+        "variance": 0.3296721457,
+        "rmse": 0.9801309442,
+        "coverage": 1.0,
+        "power": 0.0,
+        "true_effect": -0.1636363636
+      }
+    ],
+    "design": [
+      {
+        "scenario": "低干扰-低异质性",
+        "bucketing": "structured_stratified",
+        "max_smd": 0.3827200055,
+        "cross_arm_edge_ratio": 0.5254054054,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "bucketing": "semantic_stratified",
+        "max_smd": 0.368128854,
+        "cross_arm_edge_ratio": 0.5227027027,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "低干扰-低异质性",
+        "bucketing": "graph_cluster",
+        "max_smd": 0.8229196727,
+        "cross_arm_edge_ratio": 0.2553153153,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "bucketing": "structured_stratified",
+        "max_smd": 0.3827200055,
+        "cross_arm_edge_ratio": 0.5254054054,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "bucketing": "semantic_stratified",
+        "max_smd": 0.368128854,
+        "cross_arm_edge_ratio": 0.5227027027,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "低干扰-高异质性",
+        "bucketing": "graph_cluster",
+        "max_smd": 0.8229196727,
+        "cross_arm_edge_ratio": 0.2553153153,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "bucketing": "structured_stratified",
+        "max_smd": 0.3827200055,
+        "cross_arm_edge_ratio": 0.5254054054,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "bucketing": "semantic_stratified",
+        "max_smd": 0.368128854,
+        "cross_arm_edge_ratio": 0.5227027027,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "高干扰-低异质性",
+        "bucketing": "graph_cluster",
+        "max_smd": 0.8229196727,
+        "cross_arm_edge_ratio": 0.2553153153,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "bucketing": "structured_stratified",
+        "max_smd": 0.3827200055,
+        "cross_arm_edge_ratio": 0.5254054054,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "bucketing": "semantic_stratified",
+        "max_smd": 0.368128854,
+        "cross_arm_edge_ratio": 0.5227027027,
+        "internal_density": 0.4689712249
+      },
+      {
+        "scenario": "高干扰-高异质性",
+        "bucketing": "graph_cluster",
+        "max_smd": 0.8229196727,
+        "cross_arm_edge_ratio": 0.2553153153,
+        "internal_density": 0.4689712249
+      }
+    ]
+  },
+  "hypothesis_eval": {
+    "recall_at_top_x": 1.0,
+    "spearman": 0.7999999999999999,
+    "spearman_p": 0.10408803866182788,
+    "experiments_to_50pct": 1,
+    "random_experiments_to_50pct": 20,
+    "top_k_capture": {
+      "1": 0.5689655172413792,
+      "2": 0.5689655172413792,
+      "3": 0.5689655172413792,
+      "5": 0.5689655172413792,
+      "8": 0.5689655172413792,
+      "12": 0.5689655172413792,
+      "20": 0.5689655172413792
+    },
+    "random_baseline_capture": {
+      "1": 0.103125,
+      "2": 0.165625,
+      "3": 0.225,
+      "5": 0.3375,
+      "8": 0.4375,
+      "12": 0.471875,
+      "20": 0.496875
+    },
+    "manual_baseline_capture": {
+      "1": 0.125,
+      "2": 0.25,
+      "3": 0.375,
+      "5": 0.625,
+      "8": 1.0,
+      "12": 1.0,
+      "20": 1.0
+    }
+  },
+  "ranked_hypotheses": [
+    {
+      "statement": "放宽预算上限可提升大客户消耗与总转化",
+      "metric": "total_spend",
+      "direction": "up",
+      "confidence": 0.6066666666666667,
+      "source": "corpus",
+      "policy_kind": "budget_cap_multiplier",
+      "expected_lift": 0.02878787878787879,
+      "risk": 0.5,
+      "priority": 0.034929292929292935,
+      "matched_experiment_id": 34,
+      "true_effect": 0.04545454545454547
+    },
+    {
+      "statement": "切换二价机制可降低恶意抬价并提升广告主留存",
+      "metric": "advertiser_survival",
+      "direction": "up",
+      "confidence": 0.565,
+      "source": "corpus",
+      "policy_kind": "auction_rule",
+      "expected_lift": 0.01212121212121211,
+      "risk": 0.9,
+      "priority": 0.0076094276094276015,
+      "matched_experiment_id": 18,
+      "true_effect": 0.04545454545454544
+    },
+    {
+      "statement": "降低竞价门槛可提升中小广告主活跃度与总消耗",
+      "metric": "small_advertiser_survival",
+      "direction": "up",
+      "confidence": 0.6483333333333333,
+      "source": "corpus",
+      "policy_kind": "lower_bid_floor",
+      "expected_lift": 0.0022727272727272735,
+      "risk": 0.6,
+      "priority": 0.002455808080808082,
+      "matched_experiment_id": 40,
+      "true_effect": 0.045454545454545456
+    },
+    {
+      "statement": "限制单条信息流广告条数可降低用户负反馈率",
+      "metric": "negative_feedback_rate",
+      "direction": "down",
+      "confidence": 0.565,
+      "source": "corpus",
+      "policy_kind": "ad_load_cap",
+      "expected_lift": -0.03863636363636363,
+      "risk": 0.4,
+      "priority": -0.05457386363636362,
+      "matched_experiment_id": 12,
+      "true_effect": -0.17272727272727273
+    },
+    {
+      "statement": "提高竞价门槛可降低低质广告数量与用户负反馈率",
+      "metric": "negative_feedback_rate",
+      "direction": "down",
+      "confidence": 0.6066666666666667,
+      "source": "corpus",
+      "policy_kind": "raise_bid_floor",
+      "expected_lift": -0.09696969696969697,
+      "risk": 0.7,
+      "priority": -0.08404040404040404,
+      "matched_experiment_id": 11,
+      "true_effect": -0.11818181818181817
+    }
+  ],
+  "equilibrium": {
+    "policy": "降低竞价门槛",
+    "converged": false,
+    "final_metrics": {
+      "total_spend": 9063.610498518827,
+      "total_conversions": 169.0,
+      "negative_feedback_rate": 0.5283333333333333,
+      "advertiser_survival": 0.7,
+      "small_advertiser_survival": 0.7432432432432432
+    },
+    "static_metrics": {
+      "total_spend": 9418.976609333498,
+      "total_conversions": 161.0,
+      "negative_feedback_rate": 0.49833333333333335,
+      "advertiser_survival": 0.6090909090909091,
+      "small_advertiser_survival": 0.6216216216216216
+    },
+    "sensitivity": [
+      {
+        "total_spend": 8972.8792826676,
+        "total_conversions": 173.0,
+        "negative_feedback_rate": 0.5716666667,
+        "advertiser_survival": 0.8545454545,
+        "small_advertiser_survival": 0.972972973,
+        "magnitude_multiplier": 0.5
+      },
+      {
+        "total_spend": 9544.2421421952,
+        "total_conversions": 156.0,
+        "negative_feedback_rate": 0.5691666667,
+        "advertiser_survival": 0.7454545455,
+        "small_advertiser_survival": 0.7297297297,
+        "magnitude_multiplier": 0.75
+      },
+      {
+        "total_spend": 9028.6437790023,
+        "total_conversions": 149.0,
+        "negative_feedback_rate": 0.5658333333,
+        "advertiser_survival": 0.8727272727,
+        "small_advertiser_survival": 0.972972973,
+        "magnitude_multiplier": 1.0
+      },
+      {
+        "total_spend": 9518.7191744668,
+        "total_conversions": 159.0,
+        "negative_feedback_rate": 0.5491666667,
+        "advertiser_survival": 0.7363636364,
+        "small_advertiser_survival": 0.7567567568,
+        "magnitude_multiplier": 1.25
+      },
+      {
+        "total_spend": 9630.4101437074,
+        "total_conversions": 171.0,
+        "negative_feedback_rate": 0.5516666667,
+        "advertiser_survival": 0.7818181818,
+        "small_advertiser_survival": 0.7702702703,
+        "magnitude_multiplier": 1.5
+      }
+    ],
+    "response_hypotheses": [
+      {
+        "advertiser_type": "S",
+        "behavior": "raise_budget",
+        "magnitude": 0.2,
+        "probability": 0.8,
+        "source": "llm"
+      },
+      {
+        "advertiser_type": "S",
+        "behavior": "expand_targeting",
+        "magnitude": 0.1,
+        "probability": 0.5,
+        "source": "llm"
+      },
+      {
+        "advertiser_type": "M",
+        "behavior": "change_creative",
+        "magnitude": 0.15,
+        "probability": 0.4,
+        "source": "llm"
+      },
+      {
+        "advertiser_type": "L",
+        "behavior": "raise_budget",
+        "magnitude": 0.05,
+        "probability": 0.5,
+        "source": "llm"
+      }
+    ]
+  },
+  "closed_loop": {
+    "hypothesis": "放宽预算上限可提升大客户消耗与总转化",
+    "policy": "budget_cap_multiplier",
+    "true_effect": 0.42727272727272725,
+    "design": {
+      "max_smd": 0.651583731174469,
+      "mean_smd": 0.23500309884548187,
+      "n_treatment": 55,
+      "n_control": 55,
+      "cross_arm_edge_ratio": 0.25585585585585585,
+      "internal_density": 0.4689712248535778,
+      "cross_density": 0.03217549646121075
+    },
+    "estimates": [
+      {
+        "estimator": "diff_in_means",
+        "estimate": 3.6181818182,
+        "se": 0.521787809,
+        "ci_low": 2.5954777126,
+        "ci_high": 4.6408859238,
+        "p_value": 0.0
+      },
+      {
+        "estimator": "cuped",
+        "estimate": 3.6181818182,
+        "se": 0.521787809,
+        "ci_low": 2.5954777126,
+        "ci_high": 4.6408859238,
+        "p_value": 0.0
+      },
+      {
+        "estimator": "randomization_inference",
+        "estimate": 3.6181818182,
+        "se": 1.8472932947,
+        "ci_low": -3.4341032609,
+        "ci_high": 3.4341032609,
+        "p_value": 0.0
+      },
+      {
+        "estimator": "exposure_mapping",
+        "estimate": 3.5072319248,
+        "se": 1.5834469319,
+        "ci_low": 0.4036759384,
+        "ci_high": 6.6107879113,
+        "p_value": 0.0267645309
+      }
+    ],
+    "decomposition": {
+      "total_effect": 3.6181818181818173,
+      "direct_effect": 4.3999999999999995,
+      "indirect_effect": -0.7818181818181816,
+      "validation": {
+        "direct_mean_error": 3.636363636363636,
+        "indirect_mean_error": 2.220446049250313e-16,
+        "mae_direct": 5.698804690333943,
+        "mae_indirect": 2.1046488149608193,
+        "rmse_per_advertiser": 10.676551893311741
+      }
+    },
+    "attribution": "收益最高的广告主集中在「金融信贷;3C数码」品类，素材以「品质;专业」卖点、「专业;促销」基调为主，档位结构为 L;S；收益最低的广告主集中在「3C数码;金融信贷」，以「专业;免费」为主。高收益组的语义画像与策略受益机制一致，低收益组受竞争挤压或策略不匹配影响。"
+  }
+}

@@ -53,6 +53,7 @@ python -m venv .venv
 - [15-minute demo guide](docs/demo_guide.md) — time allocation with matching notebooks (Chinese)
 - [FAQ](docs/faq.md) — method trade-offs and data onboarding (Chinese)
 - [Technical report](results/technical_report.md) — full method and result matrix (Chinese)
+- [Interactive HTML report](docs/semadexp_report.html) — self-contained, charts embedded, offline & print friendly
 - [Project Wiki](https://github.com/geyuzi11/semadexp/wiki) — architecture, methodology, results & reproduction, data reference
 
 ## CLI Reference
@@ -147,4 +148,3 @@ The offline default uses a synthetic behavioral dataset so the repo runs out of 
 - Onboard real ad texts and operation logs; control semantic extraction cost via caching/distillation.
 - Extend to multi-slot auctions, bid optimization, and user interest drift.
 - Make the knowledge feedback loop online: each experiment automatically updates the hypothesis library and the ranking model.
-
